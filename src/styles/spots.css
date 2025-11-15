@@ -1,0 +1,89 @@
+
+.spots-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.country-btn {
+  background: rgba(0, 194, 203, 0.2);
+  color: var(--text-light);
+  border: 1px solid var(--aqua);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.country-btn:hover,
+.country-btn.active {
+  background: var(--aqua);
+  color: var(--deep-blue);
+}
+
+.search-panel {
+  background: rgba(0, 194, 203, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px solid var(--aqua);
+}
+
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.search-controls input,
+.search-controls select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--aqua);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
+}
+
+.hidden {
+  display: none;
+}
+
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.spot-card {
+  background: rgba(0, 194, 203, 0.1);
+  border: 1px solid var(--aqua);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.spot-card:hover {
+  transform: translateY(-5px);
+}
+
+.spot-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.spot-card .rating {
+  color: gold;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

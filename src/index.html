@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereDiveSpot</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">WhereDiveSpot</a>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/pages/docs.html">Часто необходимые документы</a></li>
+                <li><a href="/pages/spots.html">Места</a></li>
+                <li><a href="#about">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contentHome">
+    
+        <section class="hello">
+            <h1>Добро пожаловать на </h1><h1 class="waveLogo" id="waveLogo">WhereDiveSpot!</h1>
+            <p>Ваш помошник в поисках мест для дайвинга</p>
+        </section>
+    
+        <section class="warn">
+            <p>Вам могут понадобиться особые <a href="/pages/docs.html">документы</a>, для некоторых мест</a></p>
+        </section>
+
+        <section class="aboutSite">
+            <p>Сайт WhereDiveSpot создан для дайверов и путешественников, увлечённых подводным миром. Его цель — познакомить пользователей с интересными местами для дайвинга по всему миру и помочь подготовиться к поездке: на сайте указаны не только краткие описания локаций, но и информация о документах, которые могут понадобиться для посещения конкретного места. Это удобный справочник для тех, кто планирует дайв-путешествие и хочет всё организовать заранее.</p>
+        </section>
+
+        <section class="popularSpots">
+            <h2>Популярные места</h2>
+            <div id="sliderD" class="sliderD">
+            </div>
+            <div class="sliderControls">
+                <button id="backB">‹</button>
+                <button id="nextB">›</button>
+            </div>
+        </section>
+
+        <section class="userReviews">
+            <h2>Отзывы</h2>
+            <div id="reviewsD" class="reviewsGrid">
+            </div>
+        </section>
+
+        <section class="exploreMore">
+            <h2>Смотрите больше мест</h2>
+            <div id="feturedS" class="feturedS">
+
+            </div>
+            <a href="/pages/spots.html" class="linkEM">Перейти к списку мест</a>
+        </section>
+    </main>
+    
+    <footer id="about">
+        <p>Наши контакты:</p>
+        <div class="social-links">
+            <a href="mailto:info@wheredivespot.com" class="social-link">📧 info@wheredivespot.com</a>
+            <a href="https://t.me/wheredivespot" target="_blank" class="social-link">📱 Telegagram</a>
+            <a href="https://instagram.com/wheredivespot" target="_blank" class="social-link">📸 Maxagram</a>
+            <a href="https://youtube.com/wheredivespot" target="_blank" class="social-link">🎥 YouTube</a>
+        </div>
+        <p>&copy; 2025 Where Dive Spot</p>
+    </footer>
+    <script type="module" src="./scripts/main.ts"></script>
+</body>
+</html>
