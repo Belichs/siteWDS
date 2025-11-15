@@ -1,20 +1,25 @@
 {
   "name": "kursovai",
   "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/Belichs/siteWDS#readme",
+  "bugs": {
+    "url": "https://github.com/Belichs/siteWDS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belichs/siteWDS.git"
+  },
+  "license": "ISC",
+  "author": "Зайцев Василий",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^24.10.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.1.12"
   },
   "dependencies": {
     "esbuild": "^0.25.12",
@@ -28,5 +33,9 @@
     "tinyglobby": "^0.2.15",
     "undici-types": "^7.16.0"
   },
-  "description": ""
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  }
 }

@@ -51,7 +51,7 @@ function renderPopularSpots(spots: DiveSpot[]) {
             <h3>${spot.name}</h3>
             <p><strong>Глубина:</strong> ${spot.depth}</p>
             <p><strong>Уровень:</strong> ${spot.level}</p>
-            <a href="./page/spots.html#${spot.id}" class="btn">Подробнее</a>
+            <a href="/pages/spots.html#${spot.id}" class="btn">Подробнее</a>
         </div>   
     `).join('');
 }

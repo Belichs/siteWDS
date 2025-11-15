@@ -1,7 +1,15 @@
+// src/scripts/main-spots.ts
 
 import { allSpots, DiveSpot } from './spots';
 
+// DOM-элементы
+const searchInput = document.getElementById('search-input') as HTMLInputElement;
+const countryFilter = document.getElementById('country-filter') as HTMLSelectElement;
+const ratingFilter = document.getElementById('rating-filter') as HTMLSelectElement;
+const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
+const spotsContainer = document.getElementById('spots-container') as HTMLElement;
 
+// Функция отрисовки карточек
 function renderSpots(spots: DiveSpot[]) {
   spotsContainer.innerHTML = spots.map(spot => `
     <div class="spot-card">
@@ -10,21 +18,12 @@ function renderSpots(spots: DiveSpot[]) {
       <p><strong>Страна:</strong> ${spot.country}</p>
       <p><strong>Глубина:</strong> ${spot.depth}</p>
       <p><strong>Уровень:</strong> ${spot.level}</p>
-      <div class="rating">${'★'.repeat(Math.floor(spot.rating))}${spot.rating % 1 ? '½' : ''} (${spot.rating})</div>
+      <div class="rating">${'★'.repeat(Math.floor(spot.rating))} (${spot.rating})</div>
     </div>
   `).join('');
 }
 
-
-const allCountriesBtn = document.getElementById('all-countries-btn') as HTMLButtonElement;
-const countryButtons = document.querySelectorAll('.country-btn');
-const searchPanel = document.getElementById('search-panel') as HTMLElement;
-const searchInput = document.getElementById('search-input') as HTMLInputElement;
-const countryFilter = document.getElementById('country-filter') as HTMLSelectElement;
-const ratingFilter = document.getElementById('rating-filter') as HTMLSelectElement;
-const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
-const spotsContainer = document.getElementById('spots-container') as HTMLElement;
-
+// Функция обновления фильтров
 function updateFilters() {
   const country = countryFilter.value;
   const rating = parseFloat(ratingFilter.value) || 0;
@@ -41,8 +40,9 @@ function updateFilters() {
   renderSpots(filtered);
 }
 
+// Заполняем выпадающий список стран
 function populateCountryFilter() {
-  const countries = [...new Set(allSpots.map(spot => spot.country))];
+  const countries = [...new Set(allSpots.map(spot => spot.country))].sort();
   countries.forEach(country => {
     const option = document.createElement('option');
     option.value = country;
@@ -51,32 +51,13 @@ function populateCountryFilter() {
   });
 }
 
-allCountriesBtn.addEventListener('click', () => {
-  allCountriesBtn.classList.add('active');
-  countryButtons.forEach(btn => btn.classList.remove('active'));
-  searchPanel.classList.remove('hidden');
-  renderSpots(allSpots);
-});
-
-countryButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const country = btn.getAttribute('data-country');
-    if (!country) return;
-
-    allCountriesBtn.classList.remove('active');
-    countryButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    searchPanel.classList.remove('hidden');
-    renderSpots(allSpots.filter(spot => spot.country === country));
-  });
-});
-
+// Обработчики фильтров
 searchInput.addEventListener('input', updateFilters);
 countryFilter.addEventListener('change', updateFilters);
 ratingFilter.addEventListener('change', updateFilters);
 levelFilter.addEventListener('change', updateFilters);
 
+// Инициализация
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Страница "Места" загружена!');
   populateCountryFilter();
