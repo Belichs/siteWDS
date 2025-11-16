@@ -7,15 +7,8 @@ export interface DiveSpot {
   level: string;
   rating: number;
   image: string;
-  description?: string; // необязательное поле
-}
-
-interface Review {
-    id: number;
-    spotName: string;
-    text: string;
-    user: string;
-    avatar: string;
+  description?: string;
+  images: string[];
 }
 
 export const allSpots: DiveSpot[] = [
@@ -27,7 +20,10 @@ export const allSpots: DiveSpot[] = [
     level: "все уровни",
     rating: 4.8,
     image: "https://via.placeholder.com/250x150?text=Мальдивы",
-    description: "Известны своими коралловыми рифами и мanta ray."
+    description: "Известны своими коралловыми рифами и мanta ray.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 2,
@@ -36,8 +32,13 @@ export const allSpots: DiveSpot[] = [
     depth: "до 40 м",
     level: "средний+",
     rating: 4.7,
-    image: "https://via.placeholder.com/250x150?text=Красное+море",
-    description: "Прекрасная видимость и разнообразие фауны."
+    image: "../assets/RS1.png",
+    description: "Прекрасная видимость и разнообразие фауны.",
+    images: [
+      "../assets/RS1.png",
+      "../assets/RS2.avif",
+      "../assets/RS3.png"
+    ]
   },
   {
     id: 3,
@@ -45,9 +46,12 @@ export const allSpots: DiveSpot[] = [
     country: "Индонезия",
     depth: "до 35 м",
     level: "все уровни",
-    rating: 4.6,
+    rating: 5,
     image: "https://via.placeholder.com/250x150?text=Бали",
-    description: "Уютные отели и отличные дайв-центры."
+    description: "Уютные отели и отличные дайв-центры.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 4,
@@ -57,7 +61,10 @@ export const allSpots: DiveSpot[] = [
     level: "все уровни",
     rating: 4.2,
     image: "https://via.placeholder.com/250x150?text=Северное+море",
-    description: "Подводные скалы и уникальные виды."
+    description: "Подводные скалы и уникальные виды.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 5,
@@ -67,7 +74,10 @@ export const allSpots: DiveSpot[] = [
     level: "все уровни",
     rating: 4.0,
     image: "https://via.placeholder.com/250x150?text=Куршская+коса",
-    description: "Уникальная природная зона на Балтике."
+    description: "Уникальная природная зона на Балтике.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 6,
@@ -77,7 +87,10 @@ export const allSpots: DiveSpot[] = [
     level: "продвинутый",
     rating: 4.9,
     image: "https://via.placeholder.com/250x150?text=Байкал",
-    description: "Самое глубокое озеро мира, кристальная вода."
+    description: "Самое глубокое озеро мира, кристальная вода.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 7,
@@ -87,7 +100,10 @@ export const allSpots: DiveSpot[] = [
     level: "все уровни",
     rating: 3.8,
     image: "https://via.placeholder.com/250x150?text=Амстердамские+рифы",
-    description: "Искусственные рифы для начинающих."
+    description: "Искусственные рифы для начинающих.",
+    images: [
+      "../assets/"
+    ]
   },
   {
     id: 8,
@@ -97,30 +113,9 @@ export const allSpots: DiveSpot[] = [
     level: "продвинутый",
     rating: 4.5,
     image: "https://via.placeholder.com/250x150?text=Командорские",
-    description: "Дикие пейзажи и уникальная фауна."
+    description: "Дикие пейзажи и уникальная фауна.",
+    images: [
+      "../assets/"
+    ]
   }
-];
-
-const userReviews: Review[] = [
-    {
-        id: 1,
-        spotName: "Мальдивы",
-        text: "Невероятные кораллы",
-        user: "Анна",
-        avatar: "A"
-    },
-    {
-        id: 2,
-        spotName: "Красное море",
-        text: "Прекрасная видимость и разнообразие фауны",
-        user: "Игорь",
-        avatar: "И"
-    },
-    {
-        id: 3,
-        spotName: "Бали",
-        text: "Уютные отели и отличные дайв-центры.",
-        user: "Марина",
-        avatar: "M"
-    }
 ];

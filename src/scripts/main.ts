@@ -51,7 +51,7 @@ function renderPopularSpots(spots: DiveSpot[]) {
             <h3>${spot.name}</h3>
             <p><strong>Глубина:</strong> ${spot.depth}</p>
             <p><strong>Уровень:</strong> ${spot.level}</p>
-            <a href="/pages/spots.html#${spot.id}" class="btn">Подробнее</a>
+            <a href="/pages/spot.html?id=${spot.id}" class="btn">Подробнее</a>
         </div>   
     `).join('');
 }
@@ -66,7 +66,7 @@ function renderFeaturedSpots(spots: DiveSpot[]) {
       <h3>${spot.name}</h3>
       <p>${spot.depth} | ${spot.level}</p>
       <p>Рейтинг: ${spot.rating} ★</p>
-      <a href="./page/spots.html#${spot.id}" class="btn">Подробнее</a>
+      <a href="/pages/spot.html?id=${spot.id}" class="btn">Подробнее</a>
     </div>
   `).join('');
 }
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < text.length; i++) {
         const span = document.createElement("span");
         span.textContent = text[i];
-        span.style.animationDelay = `${i * 0.3}s`;
+        span.style.animationDelay = `${i * 0.15}s`;
         waveText.appendChild(span);
     }
 });

@@ -4,30 +4,6 @@
   margin: 2rem 0;
 }
 
-.country-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.country-btn {
-  background: rgba(0, 194, 203, 0.2);
-  color: var(--text-light);
-  border: 1px solid var(--aqua);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.country-btn:hover,
-.country-btn.active {
-  background: var(--aqua);
-  color: var(--deep-blue);
-}
-
 .search-panel {
   background: rgba(0, 194, 203, 0.1);
   padding: 1.5rem;
@@ -64,6 +40,8 @@
 }
 
 .spot-card {
+  display: flex;
+  flex-direction: column;
   background: rgba(0, 194, 203, 0.1);
   border: 1px solid var(--aqua);
   border-radius: 8px;
@@ -80,6 +58,16 @@
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.spot-card h3{
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+.spot-card p{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .spot-card .rating {

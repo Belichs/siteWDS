@@ -1,15 +1,14 @@
-// src/scripts/main-spots.ts
 
 import { allSpots, DiveSpot } from './spots';
 
-// DOM-элементы
+
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const countryFilter = document.getElementById('country-filter') as HTMLSelectElement;
 const ratingFilter = document.getElementById('rating-filter') as HTMLSelectElement;
 const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
 const spotsContainer = document.getElementById('spots-container') as HTMLElement;
 
-// Функция отрисовки карточек
+
 function renderSpots(spots: DiveSpot[]) {
   spotsContainer.innerHTML = spots.map(spot => `
     <div class="spot-card">
@@ -19,11 +18,12 @@ function renderSpots(spots: DiveSpot[]) {
       <p><strong>Глубина:</strong> ${spot.depth}</p>
       <p><strong>Уровень:</strong> ${spot.level}</p>
       <div class="rating">${'★'.repeat(Math.floor(spot.rating))} (${spot.rating})</div>
+      <a href="/pages/spot.html?id=${spot.id}" class="btn">Подробнее</a>
     </div>
   `).join('');
 }
 
-// Функция обновления фильтров
+
 function updateFilters() {
   const country = countryFilter.value;
   const rating = parseFloat(ratingFilter.value) || 0;
@@ -40,7 +40,7 @@ function updateFilters() {
   renderSpots(filtered);
 }
 
-// Заполняем выпадающий список стран
+
 function populateCountryFilter() {
   const countries = [...new Set(allSpots.map(spot => spot.country))].sort();
   countries.forEach(country => {
@@ -51,15 +51,31 @@ function populateCountryFilter() {
   });
 }
 
-// Обработчики фильтров
+
 searchInput.addEventListener('input', updateFilters);
 countryFilter.addEventListener('change', updateFilters);
 ratingFilter.addEventListener('change', updateFilters);
 levelFilter.addEventListener('change', updateFilters);
 
-// Инициализация
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Страница "Места" загружена!');
   populateCountryFilter();
   renderSpots(allSpots);
+  
+  const waveText = document.getElementById("waveLogo");
+    if (!waveText) {
+        console.warn("Елемент с таким id не найден")
+        return;
+    }
+
+    const text = waveText.textContent || "";
+    waveText.innerHTML = "";
+    
+    for (let i = 0; i < text.length; i++) {
+        const span = document.createElement("span");
+        span.textContent = text[i];
+        span.style.animationDelay = `${i * 0.3}s`;
+        waveText.appendChild(span);
+    }
 });
