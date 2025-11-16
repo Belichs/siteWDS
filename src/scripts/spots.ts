@@ -9,6 +9,8 @@ export interface DiveSpot {
   image: string;
   description?: string;
   images: string[];
+  lat: number;
+  lng: number;
 }
 
 export const allSpots: DiveSpot[] = [
@@ -23,7 +25,9 @@ export const allSpots: DiveSpot[] = [
     description: "Известны своими коралловыми рифами и мanta ray.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 3.2028,
+    lng: 73.2207
   },
   {
     id: 2,
@@ -38,7 +42,9 @@ export const allSpots: DiveSpot[] = [
       "../assets/RS1.png",
       "../assets/RS2.avif",
       "../assets/RS3.png"
-    ]
+    ],
+    lat: 27.8333,
+    lng: 34.0
   },
   {
     id: 3,
@@ -51,7 +57,9 @@ export const allSpots: DiveSpot[] = [
     description: "Уютные отели и отличные дайв-центры.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: -8.3405,
+    lng: 115.0920
   },
   {
     id: 4,
@@ -64,7 +72,9 @@ export const allSpots: DiveSpot[] = [
     description: "Подводные скалы и уникальные виды.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 55.0,
+    lng: 3.0
   },
   {
     id: 5,
@@ -77,7 +87,9 @@ export const allSpots: DiveSpot[] = [
     description: "Уникальная природная зона на Балтике.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 55.1,
+    lng: 20.8
   },
   {
     id: 6,
@@ -90,7 +102,9 @@ export const allSpots: DiveSpot[] = [
     description: "Самое глубокое озеро мира, кристальная вода.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 53.5,
+    lng: 108.0
   },
   {
     id: 7,
@@ -103,7 +117,9 @@ export const allSpots: DiveSpot[] = [
     description: "Искусственные рифы для начинающих.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 52.3702,
+    lng: 4.8952
   },
   {
     id: 8,
@@ -116,6 +132,8 @@ export const allSpots: DiveSpot[] = [
     description: "Дикие пейзажи и уникальная фауна.",
     images: [
       "../assets/"
-    ]
+    ],
+    lat: 55.0,
+    lng: 167.0
   }
 ];
