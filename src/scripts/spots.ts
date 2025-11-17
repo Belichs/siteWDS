@@ -21,10 +21,12 @@ export const allSpots: DiveSpot[] = [
     depth: "до 30 м",
     level: "все уровни",
     rating: 4.8,
-    image: "https://via.placeholder.com/250x150?text=Мальдивы",
+    image: "../assets/Mal.jfif",
     description: "Известны своими коралловыми рифами и мanta ray.",
     images: [
-      "../assets/"
+      "../assets/Mal.jfif",
+      "../assets/mal2.webp",
+      "../assets/mal3.jpg"
     ],
     lat: 3.2028,
     lng: 73.2207
@@ -53,10 +55,13 @@ export const allSpots: DiveSpot[] = [
     depth: "до 35 м",
     level: "все уровни",
     rating: 5,
-    image: "https://via.placeholder.com/250x150?text=Бали",
+    image: "../assets/Bal.jfif",
     description: "Уютные отели и отличные дайв-центры.",
     images: [
-      "../assets/"
+      "../assets/Bal.jfif",
+      "../assets/bal2.webp",
+      "../assets/bal3.jpg",
+      "../assets/bal4.jpg"
     ],
     lat: -8.3405,
     lng: 115.0920
@@ -68,10 +73,13 @@ export const allSpots: DiveSpot[] = [
     depth: "до 20 м",
     level: "все уровни",
     rating: 4.2,
-    image: "https://via.placeholder.com/250x150?text=Северное+море",
+    image: "../assets/gal.jfif",
     description: "Подводные скалы и уникальные виды.",
     images: [
-      "../assets/"
+      "../assets/gal.jfif",
+      "../assets/gal2.webp",
+      "../assets/gal3.webp",
+      "../assets/gal4.jpg"
     ],
     lat: 55.0,
     lng: 3.0
@@ -83,10 +91,10 @@ export const allSpots: DiveSpot[] = [
     depth: "до 15 м",
     level: "все уровни",
     rating: 4.0,
-    image: "https://via.placeholder.com/250x150?text=Куршская+коса",
+    image: "../assets/kk.jpg",
     description: "Уникальная природная зона на Балтике.",
     images: [
-      "../assets/"
+      "../assets/kk.jpg"
     ],
     lat: 55.1,
     lng: 20.8
@@ -98,10 +106,10 @@ export const allSpots: DiveSpot[] = [
     depth: "до 40 м",
     level: "продвинутый",
     rating: 4.9,
-    image: "https://via.placeholder.com/250x150?text=Байкал",
+    image: "../assets/ob.jpg",
     description: "Самое глубокое озеро мира, кристальная вода.",
     images: [
-      "../assets/"
+      "../assets/ob.jpg"
     ],
     lat: 53.5,
     lng: 108.0
@@ -113,10 +121,10 @@ export const allSpots: DiveSpot[] = [
     depth: "до 10 м",
     level: "все уровни",
     rating: 3.8,
-    image: "https://via.placeholder.com/250x150?text=Амстердамские+рифы",
+    image: "../assets/ar.jpg",
     description: "Искусственные рифы для начинающих.",
     images: [
-      "../assets/"
+      "../assets/ar.jpg"
     ],
     lat: 52.3702,
     lng: 4.8952
@@ -128,10 +136,10 @@ export const allSpots: DiveSpot[] = [
     depth: "до 30 м",
     level: "продвинутый",
     rating: 4.5,
-    image: "https://via.placeholder.com/250x150?text=Командорские",
+    image: "../assets/ko.webp",
     description: "Дикие пейзажи и уникальная фауна.",
     images: [
-      "../assets/"
+      "../assets/ko.webp"
     ],
     lat: 55.0,
     lng: 167.0

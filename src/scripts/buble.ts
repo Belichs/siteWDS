@@ -14,7 +14,6 @@ function createBubble() {
 
   const duration = Math.random() * 5 + 5;
 
-  // Запускаем анимацию всплытия вручную
   let startTime: number | null = null;
   let animationFrameId: number;
 
@@ -23,7 +22,7 @@ function createBubble() {
     const elapsed = timestamp - startTime;
 
     const progress = Math.min(elapsed / (duration * 1000), 1);
-    const currentBottom = progress * 100; // от 0 до 100vh
+    const currentBottom = progress * 100;
 
     bubble.style.bottom = `${currentBottom}vh`;
 
