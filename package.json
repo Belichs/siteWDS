@@ -1,7 +1,6 @@
 {
   "name": "kursovai",
   "version": "1.0.0",
-  "description": "",
   "keywords": [],
   "homepage": "https://github.com/Belichs/siteWDS#readme",
   "bugs": {
@@ -37,5 +36,6 @@
     "@types/node": "^24.10.1",
     "typescript": "^5.9.3",
     "vite": "^7.2.2"
-  }
+  },
+  "description": ""
 }

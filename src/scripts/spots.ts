@@ -73,10 +73,10 @@ export const allSpots: DiveSpot[] = [
     depth: "до 20 м",
     level: "все уровни",
     rating: 4.2,
-    image: "../assets/gal.jfif",
+    image: "../assets/Gul.jfif",
     description: "Подводные скалы и уникальные виды.",
     images: [
-      "../assets/gal.jfif",
+      "../assets/Gul.jfif",
       "../assets/gal2.webp",
       "../assets/gal3.webp",
       "../assets/gal4.jpg"
